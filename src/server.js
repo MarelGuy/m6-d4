@@ -15,6 +15,7 @@ const {
 const port = process.env.PORT
 
 const articlesRouter = require("./Services/Articles")
+const authorsRouter = require("./Services/Authors")
 
 app.use(cors());
 const staticFolderPath = join(__dirname, "../public")
@@ -24,6 +25,7 @@ app.use(express.json());
 // 
 
 app.use("/articles", articlesRouter)
+app.use("/authors", authorsRouter)
 
 //
 
